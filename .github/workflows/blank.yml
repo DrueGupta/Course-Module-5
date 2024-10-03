@@ -1,0 +1,50 @@
+using namespace std;
+#include <iostream>
+#include <cmath>
+#include <string>
+
+string tc;
+string tf;
+string moles;
+string tm;
+string mm;
+string g = "9.8";
+string t;
+string distance;
+int yes;
+void main()
+{
+	cout << "Please insert Farhienet" << endl;
+	cin >> tf;
+	//this does math for total Celcious
+	double tc = (tf - 32) / 1.8;
+	cout << tc << endl;
+
+	cout << "Please insert your total mass" << endl;
+	cin >> tm;
+	cout << "Please insert your Molecular Mass as well" << endl;
+	cin >> mm;
+	//This does math for moles
+	double moles = (tm / mm);
+	cout << moles << endl;
+
+	cout << "Finally, please insert time" << endl;
+	cin >> t;
+	//This does math for distance
+	double distance = (g * t pow(2));
+	cout << distance << endl;
+
+	cout << "Would you like to print all your results?" << endl;
+	cin;
+	//This prints out the result if the person says yes
+	if (cin == yes)
+	{
+		cout << "Your Celcius is " << tc << endl;
+		cout << "Your moles is " << moles << endl;
+		cout << "Your distance is " << distance << endl;
+	}
+	else
+	{
+		return 0;
+	}
+}
